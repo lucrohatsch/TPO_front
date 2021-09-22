@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.904);
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+}
+
+.encabezado{
+    color: white;
+    width: 90%;
+    padding: 5%;
+    grid-column: 1/4;
+}
+
+
+.procesos{
+    grid-column: 1/4;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.pr{
+    width: 100px;
+    height: 100px;
+    background: rgba(172, 255, 47, 0.863);
+    border-radius: 20px;
+    padding: 5px ;
+    text-align: center;
+}
+
+a  {
+    text-decoration: none;
+    color: black;
+    background: tomato;
+    padding: 2px;
+    border-radius: 3px;
+    border: solid black .2px;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
