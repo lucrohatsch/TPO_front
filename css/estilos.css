@@ -7,25 +7,12 @@ body{
 .contenedor{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
-
-.encabezado{
-    color: white;
-    width: 90%;
-    padding: 5%;
-    grid-column: 1/4;
-}
-
-
-.procesos{
-    grid-column: 1/4;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     
 }
 
 .pr{
+    display: flex;
+    flex-direction: column;
     width: 140px;
     height: 200px;
     background: white;
@@ -33,16 +20,27 @@ body{
     border-radius: 20px;
     padding: 5px ;
     text-align: center;
+    margin: 5px;
+    justify-content: center;
 }
 
+
+
+
 .pr > a  {
-    text-decoration: none;
+    
+    width: 65%;
     color: black;
     background: tomato;
     padding: 2px;
     border-radius: 3px;
     border: solid black .2px;
+    margin: auto;
 }
+a{
+    text-decoration: none;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -51,4 +49,50 @@ a:visited {
 }
 a:active {
     text-decoration: none;
+}
+
+.pr > img {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 479px) {
+    .encabezado {
+        background: red;
+    }
+    
+    .encabezado{
+        color: white;
+        width: 90%;
+        padding: 5%;
+        grid-column: 1/4;
+    }
+
+    .menu{
+        grid-column: 1/4;
+        background: chartreuse;
+        width: 20%;
+    
+    }
+    .procesos{
+        grid-column: 1/4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+    }
+}
+
+@media screen and (min-width: 479px) and (max-width: 799px) {
+    .encabezado {
+        background: green;
+    }
+    
+}
+@media screen and (min-width: 800px) {
+    .encabezado {
+        background: white;
+    }
+    
 }
