@@ -2,12 +2,18 @@ body{
     margin: 0;
     padding: 0;
     background:#333;
+    font-family: 'Prompt', sans-serif;
+    font-weight: inherit;
 }
 
 .contenedor{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
+    
+}
+.encabezado{
+    font-weight: bolder;
 }
 
 .pr{
@@ -20,16 +26,11 @@ body{
     border-radius: 20px;
     padding: 5px ;
     text-align: center;
-    margin: 5px;
+    margin: 2px;
     justify-content: center;
 }
 
-
-
-
 .pr > a  {
-    
-    width: 65%;
     color: black;
     background: tomato;
     padding: 2px;
@@ -38,6 +39,7 @@ body{
     margin: auto;
 }
 a{
+    display: inline;
     text-decoration: none;
 }
 
@@ -50,6 +52,21 @@ a:visited {
 a:active {
     text-decoration: none;
 }
+.barra{
+    margin-top: 5px;
+}
+
+.barra > a {
+    background: khaki;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+}
+footer{
+    display: flex;
+    align-content: flex-end;
+    grid-column: 1/3;
+    font-size: 6px;
+}
 
 .pr > img {
     width: 50%;
@@ -58,24 +75,50 @@ a:active {
 }
 
 @media screen and (max-width: 479px) {
-    .encabezado {
-        background: red;
+
+    .pr{
+        
+        width: 300px;
+        height: 140px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .pr > a {
+        width: 20%;
+    }
+
+    .pr > h3 {
+        width: 30%;
+    }
+
+    .pr > img {
+        width: 30%;
+        display: block;
+        margin: auto;
     }
     
     .encabezado{
+        position: fixed;
+        background: red;
         color: white;
-        width: 90%;
-        padding: 5%;
+        width: 100%;
+        padding: 5px;
         grid-column: 1/4;
+        height: 110px;
+        
+    }
+    .encabezado > h1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 
-    .menu{
-        grid-column: 1/4;
-        background: chartreuse;
-        width: 20%;
+    .barra{
+        display: none;
     
     }
     .procesos{
+        margin-top: 130px;
         grid-column: 1/4;
         display: flex;
         flex-wrap: wrap;
@@ -86,13 +129,56 @@ a:active {
 
 @media screen and (min-width: 479px) and (max-width: 799px) {
     .encabezado {
+        
         background: green;
+        grid-row: 1/4;
+        position: fixed;
+        width: 30%;
+        height: 100%;
+        align-items: center;
+        white-space: nowrap
     }
-    
+    .encabezado > h1{
+        margin-top: 150px;
+        transform: rotate(-90deg);
+    }
+
+    .barra{
+        text-align: end;
+        grid-column: 2/4; 
+    }
+
+    .procesos{
+        grid-column: 2/4;
+        margin: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
 }
 @media screen and (min-width: 800px) {
     .encabezado {
+        grid-column: 1/4;
         background: white;
+        text-align: center;
     }
     
+    .barra{
+        
+        text-align: end;
+        grid-column: 1/4;
+        margin-top: -30px;
+        
+    }
+
+    .procesos{
+        grid-column: 1/4;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 90vh;
+    }
+
 }
