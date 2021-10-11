@@ -15,7 +15,7 @@ body{
     z-index: 10;
 }
 
-.pr{
+.pr {
     display: flex;
     flex-direction: column;
     width: 140px;
@@ -80,10 +80,40 @@ footer{
     margin: auto;
 }
 
+.medidor{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    background: white;
+    box-shadow: thistle 2px 2px;
+    border-radius: 20px;
+    padding: 5px ;
+    text-align: center;
+    margin: 2px;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    animation-name: fade_in;
+    animation-duration: 2s;
+}
+
+.lecturas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.valor{
+    margin: auto;
+    font-size: large;
+    
+}
+
 @media screen and (max-width: 479px) {
 
-    .pr{
-        
+    .pr { 
         width: 300px;
         height: 140px;
         flex-direction: row;
@@ -148,8 +178,12 @@ footer{
         margin-top: 130px;
         grid-column: 1/4;
         
-
     }
+    .Dashboard > div > h3{
+        color: tomato;
+    }
+    
+    
 }
 
 @media screen and (min-width: 479px) and (max-width: 820px) {
@@ -181,6 +215,10 @@ footer{
         justify-content: space-evenly;
     }
 
+    .Dashboard{
+        grid-column: 2/4;
+        margin: 5px;
+    }
 }
 @media screen and (min-width: 821px) {
     .encabezado {
