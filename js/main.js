@@ -1,5 +1,3 @@
-console.log("Hola Codo")
-
 function inicio(){
     nombre = document.getElementById('nombre');
     nombre.addEventListener('change', validaNombre, true);
