@@ -130,6 +130,8 @@ footer{
     margin: 5%;
 }
 
+
+
 @media screen and (max-width: 479px) {
 
     .pr { 
@@ -209,7 +211,10 @@ footer{
 
     }
 
-
+    .mapa{
+        grid-column: 1/4;
+        
+    }
 
 }
 
@@ -271,6 +276,13 @@ footer{
     .formulario{
         grid-column: 2/4;
         margin-top: 50px;
+        
+    }
+    form{
+        padding: 0;
+    }
+    .mapa{
+        display: none;
     }
 }
 @media screen and (min-width: 821px) {
@@ -338,6 +350,9 @@ footer{
         grid-column: 1/4;
         min-width: 50%;
         
+    }
+    .mapa{
+        grid-column: 1/4;
     }
 }
 
